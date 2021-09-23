@@ -16,7 +16,7 @@
 
 # Ansible retry files
 /**/*.retry
-/**/*.log
+# /**/*.log
 
 # Ansible deploy keys
 /ansible/files/puzzlord_deploy_key
