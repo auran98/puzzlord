@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
+import datetime
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,7 +26,7 @@ SECRET_KEY = "FIXME_SECRET_KEY_GOES_HERE"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 # Application definition
@@ -114,3 +116,16 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 SITE_PASSWORD = "FIXME_PASSWORD_GOES_HERE"
+
+HUNT_TIME = datetime.datetime(
+    year=2021,
+    month=1,
+    day=15,
+    hour=17,
+    minute=0,
+    second=0,
+    microsecond=0,
+    tzinfo=datetime.timezone.utc,
+)
+
+django_heroku.settings(locals())
