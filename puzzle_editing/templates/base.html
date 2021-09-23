@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="{% static "css/general.css" %}">
-		<link rel="shortcut icon" href="{% static 'favicon.ico' %}"/>
+		<link rel="shortcut icon" href="{% static 'logo.svg' %}"/>
 		<title>{% block title %}Puzzlord{% endblock %}</title>
 	</head>
 	<body>
@@ -37,12 +37,8 @@
 					{% countdown %}
 				</div>
 				<select id="theme" class="theme">
-					<option value="classic">classic</option>
+					<option value="classic">light</option>
 					<option value="dark">dark</option>
-					<option value="neopets">neopets</option>
-					<option value="jellybeans">jellybeans</option>
-					<option value="solarized">solarized</option>
-					<option value="flamewyrm">flamewyrm</option>
 				</select>
 				<div class="nav-login">
 				{% if request.user.is_authenticated %}
