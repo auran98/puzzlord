@@ -116,12 +116,12 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-SITE_PASSWORD = "FIXME_PASSWORD_GOES_HERE"
+SITE_PASSWORD = "spaghetti"
 
 HUNT_TIME = datetime.datetime(
-    year=2021,
-    month=1,
-    day=15,
+    year=2022,
+    month=4,
+    day=30,
     hour=17,
     minute=0,
     second=0,
