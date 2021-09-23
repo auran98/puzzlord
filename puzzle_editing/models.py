@@ -27,7 +27,7 @@ class UserProfile(models.Model):
     discord_username = models.CharField(
         max_length=500,
         blank=True,
-        help_text="Your Discord username and tag (e.g. example#1234)",
+        help_text="Your Slack username and tag (e.g. example#1234)",
     )
     credits_name = models.CharField(
         max_length=80,

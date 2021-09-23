@@ -165,15 +165,15 @@ class RegisterForm(forms.ModelForm):
     site_password = forms.CharField(
         label="Site password",
         widget=forms.PasswordInput,
-        help_text="Get this password from the Discord.",
+        help_text="Get this password from the admin.",
     )
 
     display_name = forms.CharField(
         label="Display name", required=False, help_text="(optional)"
     )
     discord_username = forms.CharField(
-        label="Discord username",
-        help_text="(required) Discord username and tag (e.g. example#1234)",
+        label="Slack username",
+        help_text="Slack username and tag (e.g. example#1234)",
     )
     credits_name = forms.CharField(
         label="Credits name",
