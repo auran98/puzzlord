@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "FIXME_SECRET_KEY_GOES_HERE"
+SECRET_KEY = os.environ.get("SECRET_KEY", os.getenv("SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -122,7 +122,7 @@ LOGOUT_REDIRECT_URL = "/"
 
 STATIC_URL = "/static/"
 
-SITE_PASSWORD = "spaghetti"
+SITE_PASSWORD = os.getenv("SITE_PASSWORD")
 
 HUNT_TIME = datetime.datetime(
     year=2022,
