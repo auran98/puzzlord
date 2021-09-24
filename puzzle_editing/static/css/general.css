@@ -1,31 +1,35 @@
 :root {
 	--bg: #fff;
+	--secondary-bg: hsla(220, 2%, 50%, 0.1);
+	--tertiary-bg: hsla(220, 2%, 50%, 0.2);	
+	
 	--nav-bg: #f8f8cc;
 	--nav-bg-hover: #ffe;
 	--nav-selected-border: #aa6;
+	
 	--text-color: black;
 	--deemphasized-color: #777;
-	--correct-color: #080;
-	--error-color: #900;
-	--secondary-bg: #f2f2f2;
-	--tertiary-bg: #e2e2e2;
 	--link-color: #00e;
 	--visited-color: #551a8b;
-	--border-color: #aaa;
-	--active-shadow-color: #69f;
-
+	
 	--nav-color: var(--text-color);
 	--nav-link-color: var(--link-color);
 	--nav-visited-color: var(--visited-color);
 	--nav-deemphasized-color: var(--deemphasized-color);
 	--input-bg: var(--bg);
+	
+	--correct-color: #080;
+	--error-color: #900;
+
+	--border-color: #aaa;
+	--active-shadow-color: #69f;
 
 	--by-author-color: #fee;
 	--testsolve-color: #efe;
 }
 
 [data-theme="dark"] {
-	--bg: #111;
+	--bg: #141414;
 	--nav-bg: #081838;
 	--nav-bg-hover: #137;
 	--nav-selected-border: #08e;
@@ -33,8 +37,6 @@
 	--deemphasized-color: #888;
 	--correct-color: #8e8;
 	--error-color: #d33;
-	--secondary-bg: #1f1f1f;
-	--tertiary-bg: #292929;
 	--link-color: #ace;
 	--visited-color: #dae;
 	--input-bg: #1d1d1d;
@@ -150,10 +152,10 @@ nav a:visited {
 }
 .countdown {
 	color: var(--nav-deemphasized-color);
-	font-size: 85%;
 }
 .countdown .time {
 	color: var(--nav-color);
+	font-weight: bold;
 }
 
 @media screen and (min-width: 36em) {
