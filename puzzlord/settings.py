@@ -16,7 +16,6 @@ import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -128,7 +127,7 @@ HUNT_TIME = datetime.datetime(
     year=2022,
     month=4,
     day=30,
-    hour=17,
+    hour=12,
     minute=0,
     second=0,
     microsecond=0,

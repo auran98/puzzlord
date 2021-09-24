@@ -245,8 +245,9 @@ class AccountForm(forms.Form):
 
     display_name = forms.CharField(label="Display name", required=False)
     discord_username = forms.CharField(
-        label="Discord username",
-        help_text="(required) Discord username and tag (e.g. example#1234)",
+        label="Slack username",
+		required=False,
+        help_text="Slack username and tag (e.g. example#1234)",
     )
     credits_name = forms.CharField(
         label="Credits name",
