@@ -100,7 +100,7 @@
 							{% user_list puzzle.editors %}
 						</td>
 					</tr>
-					<tr>
+					<!--<tr>
 						<th>Factcheckers<br/>
 							{% if is_factchecker %}
 							<input type="submit" name="remove_factchecker" value="Remove me">
@@ -125,7 +125,7 @@
 						<td>
 							{% user_list puzzle.postprodders %}
 						</td>
-					</tr>
+					</tr>-->
 					<tr>
 						<th>Spoiled<br />
 							<a href="{% url 'puzzle_escape' puzzle.id %}">🏃</a>
@@ -184,7 +184,7 @@
 		{% else %}
 		<div class="empty">(no solution yet)</div>
 		{% endif %}
-		<h2>Postprod</h2>
+		<!--<h2>Postprod</h2>
 		{% if puzzle.has_postprod %}
 		Puzzle postprodded at <span class="timestamp" data-timestamp="{{puzzle.postprod.mtime.timestamp}}">{{puzzle.postprod.mtime}}</span>, file size {{puzzle.postprod.get_size}}. <a href="{% url 'postprod_zip' puzzle.id %}">Download zip file</a>.<br>
 		Puzzle viewable at <a href="https://FIXME.example.com/{{puzzle.postprod.slug}}/">https://FIXME.example.com/{{puzzle.postprod.slug}}/</a>. It may take a few mintues to update after uploading here.
@@ -192,7 +192,7 @@
 		{% else %}
 		<div class="empty">(no postprod uploaded yet -
 		<a href="{% url 'puzzle_postprod' puzzle.id %}">upload one now</a>)</div>
-		{% endif %}
+		{% endif %}-->
 		<h2>Testsolve Sessions</h2>
 		{% if testsolve_sessions %}
 		<!-- this has fewer columns than the usual table -->
