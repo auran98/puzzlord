@@ -139,24 +139,19 @@
 		</aside>
 
 		<main class="puzzle-main">
-		<div>Answers: {% with puzzle.answers.all as answers %}{% if answers %}{{ answers|join:", " }}{% else %}<span class="empty">(none)</span>{% endif %}{% endwith %}
-			(<a href="{% url 'puzzle_answers' puzzle.id %}">edit</a>)
-		</div>
-		<div>Tags:
-			{% with puzzle.tags.all as tags %}
+		<h2>Summary/Description <a href="{% url 'puzzle_edit' puzzle.id %}" class="edit-link">Edit</a></h2>
+		<table class="puzzle-table puzzle-info">
+			<tr><th>Summary</th><td>{{ puzzle.summary|markdown }}</td></tr>
+			<tr><th>Description</th><td>{{ puzzle.description|markdown }}</td></tr>
+			<tr><th>Answers</th><td>{% with puzzle.answers.all as answers %}{% if answers %}{{ answers|join:", " }}{% else %}<span class="empty">(none)</span>{% endif %}{% endwith %} (<a href="{% url 'puzzle_answers' puzzle.id %}">edit</a>)</td></tr>
+			<tr><th>Tags</th><td>{% with puzzle.tags.all as tags %}
 				{% if tags %}
 				{% for tag in tags %}{% if not forloop.first %}, {% endif %}{{ tag.name }}{% endfor %}
 				{% else %}
 					<span class="empty">(none)</span>
 				{% endif %}
 			{% endwith %}
-			(<a href="{% url 'puzzle_tags' puzzle.id %}">edit</a>)
-		</div>
-
-		<h2>Summary/Description <a href="{% url 'puzzle_edit' puzzle.id %}" class="edit-link">Edit</a></h2>
-		<table class="puzzle-table puzzle-info">
-			<tr><th>Summary</th><td>{{ puzzle.summary|markdown }}</td></tr>
-			<tr><th>Description</th><td>{{ puzzle.description|markdown }}</td></tr>
+			(<a href="{% url 'puzzle_tags' puzzle.id %}">edit</a>)</td></tr>
 			<tr><th>Notes</th><td>{{ puzzle.notes|markdown }}</td></tr>
 		</table>
 
