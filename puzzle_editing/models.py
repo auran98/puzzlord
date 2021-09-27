@@ -196,7 +196,7 @@ class Puzzle(models.Model):
 
     authors = models.ManyToManyField(User, related_name="authored_puzzles", blank=True)
     editors = models.ManyToManyField(User, related_name="editing_puzzles", blank=True)
-    needed_editors = models.IntegerField(default=2)
+    needed_editors = models.IntegerField(default=1)
     spoiled = models.ManyToManyField(
         User,
         related_name="spoiled_puzzles",

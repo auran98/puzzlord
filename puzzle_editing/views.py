@@ -1497,24 +1497,24 @@ class PuzzleFinishForm(forms.Form):
                 (
                     "SPOIL",
                     mark_safe(
-                        "<strong>Finish, spoil me</strong>: You will be redirected to the puzzle discussion page. Select this if you finished the testsolve normally, or if you gave up and want to know how the puzzle works. (However, we encourage you to find others to join your session or ask the author/editors for hints before giving up!)"
+                        "<strong>Finish, and spoil me</strong>: You will be redirected to the puzzle discussion page. Select this if you finished the testsolve normally, or if you gave up and want to know how the puzzle works. (However, we encourage you to find others to join your session or ask the author/editors for hints before giving up!)"
                     ),
                 ),
                 (
                     "NO_SPOIL",
                     mark_safe(
-                        "<strong>Finish, don't spoil me</strong>: You will be redirected back to the puzzle testsolve session. Select this if you gave up but want to testsolve future revisions of this puzzle."
+                        "<strong>Finish, and don't spoil me</strong>: You will be redirected back to the puzzle testsolve session. Select this if you gave up but want to testsolve future revisions of this puzzle."
                     ),
                 ),
                 (
                     "LEAVE",
                     mark_safe(
-                        "<strong>Leave session</strong>: You will be be removed from the list of participants of this session and will stop receiving notifications about comments or answer submissions. Select this if you joined this testsolve session but it concluded without meaningfully spoiling yourself, if you joined this session by mistake, or if this is a duplicate or merged session."
+                        "<strong>Just leave session</strong>: You will be be removed from the list of participants of this session and will stop receiving notifications about comments or answer submissions. Select this if you joined this testsolve session but it concluded without meaningfully spoiling yourself, if you joined this session by mistake, or if this is a duplicate or merged session."
                     ),
                 ),
             ],
             widget=forms.RadioSelect(),
-            initial="SPOIL",
+            initial="NO_SPOIL",
         )
 
     comment = forms.CharField(widget=MarkdownTextarea, required=False)
