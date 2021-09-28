@@ -15,7 +15,8 @@
 	<div class="puzzle-inner">
 		<aside class="puzzle-side">
 			<div class="side-element">
-			<div>Status:
+			<div>
+				<h2>Status</h2>
 				{{ puzzle.get_status_display }}
 				(blocked on {{ puzzle.get_blocker }})
 			</div>
@@ -68,8 +69,7 @@
 				<input type="submit" name="change_priority" value="Change">
 			</form>
 
-			<h2 class="side-element">People
-			</h2>
+			<h2 class="side-element">People</h2>
 			<!-- sorry for copy-pasting code but I don't know how to generalize this (without losing greppability or doing some potentially nasty metaprogramming stuff) and I think there's some change we might make these forms all different later... -->
 			<form method="POST" class="side-element">
 				{% csrf_token %}
